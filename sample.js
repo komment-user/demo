@@ -1,14 +1,4 @@
-/**
-* @description This function fetches data from a Reddit API using the `axios` library
-* and returns the response or errors to the caller.
-* 
-* @param { string } sub - The `sub` input parameter is a substring that is appended
-* to the base URL "https://www.reddit.com/r/".
-* 
-* @returns { Promise } This function fetches data from a Reddit API endpoint based
-* on the provided `sub` parameter. It returns either the response from the API call
-* or `null` if there's an error.
-*/
+
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
