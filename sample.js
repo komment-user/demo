@@ -1,4 +1,14 @@
 
+/**
+* @description This function fetches the JSON data from a Reddit API link based on
+* a specified subreddit and logs any errors to the console.
+* 
+* @param { string } sub - The `sub` input parameter is a string that specifies the
+* subreddit to fetch posts from.
+* 
+* @returns { object } This function takes a subreddit as an optional parameter (`sub`)
+* and fetches the top posts from the specified subreddit using the `axios` library.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -14,6 +24,43 @@ function fetch(sub = 'programming') {
 }
 
 
+/**
+* @description This function performs a binary search on an array of items to find
+* a specific item (x).
+* 
+* @param { array } arr - The `arr` input parameter is the array to be searched.
+* 
+* @param { any } x - In the provided function `search`, the input parameter `x` is
+* the element to be searched within the array `arr`.
+* 
+* @param { number } start - The `start` parameter defines the beginning index of the
+* range of elements to be searched.
+* 
+* @param { number } end - The `end` parameter specifies the last index of the array
+* to be searched.
+* 
+* @returns { boolean } The function `search` takes an array `arr`, a target value
+* `x`, and three indexes `start`, `end`, and returns `true` or `false` indicating
+* whether `x` exists between `start` and `end` inclusive.
+* 
+* The function works by repeatedly dividing the search interval into two halves using
+* the midpoint formula `mid = (start + end) / 2`. If the target value matches the
+* value at index `mid`, the function returns `true`. If the value at `mid` is greater
+* than `x`, the function recursively calls itself with `start` updated to `mid-1`,
+* otherwise it recalls itself with `end` updated to `mid+1`.
+* 
+* In essence:
+* 
+* 	- The function first checks if the target is equal to the middle element of the
+* search interval. If so - true is returned.
+* 	- Otherwise it divides the interval into two parts and repeats the same check on
+* one of them.
+* 	- This process continues until either x is found or the interval is reduced to a
+* single element.
+* 
+* Therefore: the function returns `true` if `x` exists anywhere within the interval
+* specified by `start` and `end`.
+*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
