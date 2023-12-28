@@ -1,15 +1,3 @@
-
-/**
-* @description This function fetches data from a Reddit API using Axios and returns
-* the response or null if there's an error.
-* 
-* @param { string } sub - The `sub` input parameter is a substring that is appended
-* to the base URL of the Reddit API request.
-* 
-* @returns { object } The output returned by this function is a JSON object representing
-* the top posts from the specified subreddit. The function fetches the data from the
-* Reddit API using the `axios` library and logs the response to the console.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -25,33 +13,6 @@ function fetch(sub = 'programming') {
 }
 
 
-/**
-* @description This function performs a linear search on an array of items to find
-* the index of an element. It takes four arguments: the array (arr), the element to
-* search for (x), and the start and end indices of the search range (start and end).
-* 
-* @param { array } arr - The `arr` input parameter is the array to be searched. It
-* is not used within the body of the function.
-* 
-* @param { string } x - The `x` input parameter is the element to be searched within
-* the array.
-* 
-* @param { number } start - The `start` input parameter specifies the beginning of
-* the subarray to be searched.
-* 
-* @param { array } end - The `end` input parameter determines the boundary of the
-* subarray to be searched.
-* 
-* @returns { boolean } The function `search` takes an array `arr`, a search value
-* `x`, and three parameters `start`, `end`, which represent the range of values to
-* be searched. The function checks if `x` exists within the range by checking the
-* middle index of the range and then recursively searching the appropriate sub-range
-* (left or right).
-* 
-* The output of this function is either `true` if `x` is found within the range or
-* `false` if it is not found. The function returns `true` if `x` exists at the mid
-* index or if it finds a matching value during one of the recursive calls.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
