@@ -1,20 +1,4 @@
-/**
-* @description This function fetches the JSON data from a Reddit thread with the
-* specified `sub` parameter (defaults to "programming") using Axios.
-* 
-* @param { string } sub - The `sub` input parameter specifies the subreddit name to
-* fetch content for.
-* 
-* @returns { object } The function `fetch` takes a subreddit name as an optional
-* parameter (`sub` = 'programming' here) and makes an axios GET request to `https://www.reddit.com/r/$sub.json`.
-* 
-* The output returned by the function is:
-* 
-* 1/ The response data from Reddit's API (logged to the console).
-* 2/ Null if there was an error accessing the API.
-* 
-* In other words - a promise of the response or null.
-*/
+
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -29,54 +13,6 @@ function fetch(sub = 'programming') {
     });
 }
 
-
-/**
-* @description This function implements a binary search algorithm that searches for
-* an element `x` within an array `arr`.
-* 
-* @param { array } arr - The `arr` input parameter is the array that contains the
-* element to be searched for.
-* 
-* @param { any } x - The `x` input parameter represents the value to be searched
-* within the array passed as the first argument to the function.
-* 
-* @param { number } start - The `start` parameter specifies the left boundary of the
-* subarray to be searched.
-* 
-* @param { number } end - The `end` input parameter determines the end of the range
-* for which the `search` function should look for the given `x`.
-* 
-* @returns { boolean } The function `search` takes an array `arr`, a target value
-* `x`, and three indices `start`, `end`, and `mid` as parameters. It checks if `x`
-* exists anywhere within `arr` using binary search.
-* 
-* The output returned by the function is `true` or `false`, depending on whether `x`
-* was found within the array or not.
-* 
-* Here's a step-by-step description of the function:
-* 
-* 1/ Check if `start` is greater than `end`. If so. the search ends immediately with
-* a return value of `false`.
-* 2/ Calculate the midpoint of the range (`mid = (start + end)/2`).
-* 3/ If the element at the midpoint equals `x`, the function returns `true`.
-* 4/ If the element at the midpoint is greater than `x`, then the target value must
-* be within the lower half of the range. In this case:
-*    a. Check if the starting index of the lower half is less than or equal to the
-* current midpoint (`mid-1`). If not. the search ends with a return value of `false`.
-*    b. Recursively call the function with `arr`, `x`, `start`, and `mid-1`.
-* 5/ Otherwise (the element at the midpoint is less than or equal to `x`), the target
-* value must be within the upper half of the range. In this case:
-*    a. Check if the ending index of the upper half is greater than the current
-* midpoint (`mid+1`). If not. the search ends with a return value of `false`.
-*    b. Recursively call the function with `arr`, `x`, `mid+1`, and `end`.
-* 6/ If no valid index is found during either of these two recursive calls (stepped
-* 4b or 5b), the search ends with a return value of `false`.
-* 
-* So to summarize: the function searches for `x` within the range `[start..end]` by
-* repeatedly dividing the range into smaller segments using the midpoint and recurrency
-* until either `x` is found or it can be established that `x` does not exist within
-* the range.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
