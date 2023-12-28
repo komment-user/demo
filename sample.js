@@ -1,16 +1,4 @@
 
-/**
-* @description This function fetches data from a Reddit API endpoint using Axios.
-* It returns the response data from the API call or null if there was an error.
-* 
-* @param { object } sub - The `sub` input parameter is a default value for the URL
-* passed to the Axios GET request. In this case `https://www.reddit.com/r/${sub}.json`.
-* 
-* @returns { Promise } The output returned by this function is an asynchronous
-* response from the Reddit API for the specified subreddit (`sub` parameter). The
-* function makes a GET request to `https://www.reddit.com/r/\${sub}.json`, and the
-* response is logged to the console.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
