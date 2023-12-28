@@ -1,17 +1,4 @@
 
-/**
-* @description This function fetches the top posts from a Reddit subreddit based on
-* the provided subname (default 'programming') and logs the response to the console.
-* 
-* @param { string } sub - The `sub` input parameter is a optional parameter that
-* allows you to specify a subreddit name as a string.
-* 
-* @returns { object } The function fetches data from Reddit's API based on a specified
-* subreddit. It returns the response from the API call (in this case a JSON object),
-* but only if the request was successful (i.e., there was no error). If there was
-* an error making the request (e.g., network connection issues), it will return null
-* instead.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
