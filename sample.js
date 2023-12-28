@@ -1,15 +1,4 @@
 
-/**
-* @description This function fetches the top posts from a subreddit specified by the
-* `sub` parameter using Axios to make an HTTP GET request to the Reddit API. It then
-* logs the response data and returns it.
-* 
-* @param { string } sub - The `sub` input parameter is a string that specifies the
-* subreddit to fetch data from.
-* 
-* @returns { object } The output of the `fetch` function is a promise that resolves
-* to an object containing the data from the Reddit API.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -25,28 +14,6 @@ function fetch(sub = 'programming') {
 }
 
 
-/**
-* @description This function performs a binary search on an array `arr` for the value
-* `x`.
-* 
-* @param { array } arr - The `arr` input parameter is the array to be searched.
-* 
-* @param { any } x - The `x` input parameter is the value to be searched for within
-* the array.
-* 
-* @param { number } start - The `start` input parameter determines the left boundary
-* of the subarray to be searched.
-* 
-* @param { number } end - The `end` input parameter specifies the endpoint of the
-* search range.
-* 
-* @returns { boolean } This function takes an array `arr`, a target value `x`, and
-* three integers `start`, `end`, and `mid` as parameters. It uses a recursive binary
-* search algorithm to find the index of `x` within `arr`.
-* 
-* The output returned by this function is `true` or `false`, depending on whether
-* `x` is found within `arr` or not.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
