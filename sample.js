@@ -1,3 +1,14 @@
+/**
+* @description This function fetches data from a Reddit API using Axios and returns
+* the response or an error message depending on the success or failure of the request.
+* 
+* @param { string } sub - The `sub` input parameter is a string that specifies the
+* subreddit for which content should be fetched.
+* 
+* @returns { object } The output of the `fetch` function is a promise that resolves
+* to an object containing the content of the specified Reddit thread. If the request
+* fails due to network errors or other issues., the function returns null.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -13,6 +24,30 @@ function fetch(sub = 'programming') {
 }
 
 
+/**
+* @description This function performs a binary search on an array `arr` for the value
+* `x`. It takes four arguments: `arr`, `x`, `start`, and `end`. It returns `true`
+* if `x` is found between `start` and `end`, or `false` if it's not found.
+* 
+* @param { array } arr - The `arr` input parameter is the array that needs to be
+* searched for the specified value `x`.
+* 
+* @param { any } x - The `x` input parameter represents the element to be searched
+* within the array `arr`.
+* 
+* @param { number } start - The `start` input parameter determines the left endpoint
+* of the subarray being searched.
+* 
+* @param { number } end - The `end` input parameter determines the upper bound of
+* the subarray being searched.
+* 
+* @returns { array } The function `search` takes an array `arr`, a search value `x`,
+* and three indexes `start`, `end`, and `mid`. It returns `true` if `x` is found
+* within the range `[start..end]`.
+* 
+* The function works by repeatedly dividing the range `[start..end]` into two halves
+* until it finds the search value or reaches the boundary of the array.
+*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
