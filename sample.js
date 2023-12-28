@@ -1,18 +1,3 @@
-
-/**
-* @description This function fetches data from a Reddit API based on a specified
-* subreddit and logs the response to the console.
-* 
-* @param { string } sub - The `sub` input parameter is a subreddit name or label
-* that filters the content of the API request to the specified subreddit.
-* 
-* @returns { object } This function fetches data from a Reddit API endpoint using
-* Axios. It takes an optional subreddit parameter defaulting to 'programming'.
-* The output of the function depends on whether there's a response from the API or
-* not:
-* If no errors occur and an API response is received: The console logs the API response.
-* If there's an error :The console logs the error .
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -27,38 +12,7 @@ function fetch(sub = 'programming') {
     });
 }
 
-/**
-* @description This function implements a binary search algorithm to find an element
-* `x` within an array `arr`. It takes four parameters: `arr`, `x`, `start`, and
-* `end`. The function first checks if the start and end indices are out of order
-* (i.e., `start>end`), and returns false if so. Otherwise it calculates the midpoint
-* `mid` of the range `[start..end]` and checks if `arr[mid]` is equal to `x`. If it
-* is equal , the function returns true.
-* 
-* If `arr[mid]` is greater than `x`, the function recursively calls itself with the
-* search bounds adjusted to `start...mid-1` or `mid+1...end` depending on whether
-* `arr[mid]` is greater or less than `x`. This process continues until the element
-* is found or it is determined that `x` is not present within the range.
-* 
-* @param { array } arr - The `arr` input parameter is the array that should contain
-* the sought value.
-* 
-* @param { any } x - In the `search` function provided by the question giver - an
-* array of unknown size 'arr' containing an element or values and two integer arguments
-* for both extreme index within which 'element x'.
-* 
-* @param { number } start - The `start` input parameter represents the beginning
-* index of the array where the search will start looking for the target element `x`.
-* 
-* @param { number } end - The `end` parameter determines the upper bound of the
-* subarray that is being searched.
-* 
-* @returns { boolean } The output of this function is `true` or `false`. The function
-* takes an array and a target value as input and repeatedly divides the search space
-* into two parts (using the midpoint) until it finds the target value or determines
-* that it is not present. If the target value is found (i.e., `arr[mid]` matches the
-* input `x`), the function returns `true`.
-*/
+
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
