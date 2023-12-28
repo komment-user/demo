@@ -1,14 +1,4 @@
 
-/**
-* @description This function fetches the JSON data from a Reddit API link based on
-* a specified subreddit and logs any errors to the console.
-* 
-* @param { string } sub - The `sub` input parameter is a string that specifies the
-* subreddit to fetch posts from.
-* 
-* @returns { object } This function takes a subreddit as an optional parameter (`sub`)
-* and fetches the top posts from the specified subreddit using the `axios` library.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
