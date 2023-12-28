@@ -1,17 +1,3 @@
-
-/**
-* @description This function fetches data from a Reddit API endpoint using Axios and
-* logs the response to the console. It takes an optional `sub` parameter to specify
-* which subreddit to retrieve posts from.
-* 
-* @param { string } sub - In the given function `fetch()`, the `sub` input parameter
-* is a substring that gets passed as a parameter to the URL: `https://www.reddit.com/r/${sub}.json`.
-* 
-* @returns { object } The output returned by this function is a Promise that resolves
-* to the response data from the Reddit API for the specified subreddit (i.e.,
-* `https://www.reddit.com/r/programming.json` by default). If there's an error making
-* the request.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
