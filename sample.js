@@ -1,4 +1,15 @@
 
+/**
+* @description This function fetches data from a Reddit API endpoint based on the
+* `sub` parameter. It uses Axios to make the request and logs the response to the console.
+* 
+* @param { string } sub - The `sub` input parameter specifies the subreddit for which
+* to fetch content.
+* 
+* @returns { Promise } The function `fetch` returns nothing (or "undefined" if you
+* prefer), because the return statement inside the callback of the `axios.get()`
+* method is not reachable (since the promise resolves to the `response` object).
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
