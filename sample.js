@@ -1,3 +1,13 @@
+/**
+* @description This function fetches the top posts from a subreddit by making an API
+* request to the appropriate URL and logging the response to the console.
+* 
+* @param { string } sub - The `sub` input parameter is a subreddit name.
+* 
+* @returns { object } This function fetches data from a Reddit API based on a subreddit
+* parameter. The output returned by the function is either the response data from
+* the API call or null if an error occurs.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
