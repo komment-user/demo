@@ -1,4 +1,21 @@
 
+/**
+* @description This function fetches data from a Reddit API using Axios. It takes
+* an optional parameter 'sub' which is used to specify the subreddit name.
+* 
+* @param { string } sub - In this function `fetch`, the `sub` input parameter is
+* used to specify the subreddit whose posts should be fetched.
+* 
+* @returns { object } The function `fetch` takes a subreddit as an optional parameter
+* (`sub = 'programming'`) and uses `axios` to fetch the top 25 posts from the specified
+* subreddit.
+* 
+* The function first logs the response data to the console and then returns the
+* response object.
+* 
+* Therefore the output returned by this function is the same as the input response
+* object from the API call.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
