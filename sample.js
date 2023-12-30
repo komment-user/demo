@@ -1,3 +1,17 @@
+/**
+* @description This function fetches the JSON data from a Reddit post page related
+* to a specified subreddit.
+* 
+* @param { string } sub - In the given function `fetch`, the `sub` input parameter
+* is a substring that is used to append to the URL "https://www.reddit.com/r/".
+* 
+* @returns { object } The output of the `fetch` function is a Promise that resolves
+* to the contents of the Reddit postsubmatch data at `/r/programming.json`. If there's
+* an error fetching the data it returns null. In other words when you call the
+* function like so:
+* ```scss
+* fetch(); // outputs whatever reddit has posted under r/programming.json today.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
