@@ -1,3 +1,17 @@
+/**
+* @description This function fetches data from a Reddit API using Axios and logs the
+* response to the console.
+* 
+* @param { string } sub - The `sub` input parameter is a default value for the URL
+* parameter. It is used to specify the subreddit name for which the user wants to
+* fetch the top posts.
+* 
+* @returns { object } The output returned by this function is a Promise that resolves
+* to an object containing the data from the Reddit API for the specified subreddit
+* (determined by the `sub` parameter). If an error occurs during the API request
+* (e.g., if the URL is invalid or the server is down), the function returns a null
+* value.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
