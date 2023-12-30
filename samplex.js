@@ -1,16 +1,3 @@
-
-/**
-* @description This function fetches data from a Reddit API based on a given subreddit
-* (determined by the `sub` parameter), using Axios to make the request and returning
-* the response or an error message to the caller.
-* 
-* @param { string } sub - In this function `sub` is an optional parameter that is
-* passed as a string and it serves as a URL parameter to fetch data from a specific
-* subreddit.
-* 
-* @returns { object } The output of the function is an object representing the JSON
-* data from the specified Reddit subcategory.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -26,43 +13,6 @@ function fetch(sub = 'programming') {
 }
 
 
-/**
-* @description This function performs a binary search on an array of items to find
-* a specific item (x).
-* 
-* @param { array } arr - The `arr` input parameter is the array to be searched.
-* 
-* @param { any } x - In the provided function `search`, the input parameter `x` is
-* the element to be searched within the array `arr`.
-* 
-* @param { number } start - The `start` parameter defines the beginning index of the
-* range of elements to be searched.
-* 
-* @param { number } end - The `end` parameter specifies the last index of the array
-* to be searched.
-* 
-* @returns { boolean } The function `search` takes an array `arr`, a target value
-* `x`, and three indexes `start`, `end`, and returns `true` or `false` indicating
-* whether `x` exists between `start` and `end` inclusive.
-* 
-* The function works by repeatedly dividing the search interval into two halves using
-* the midpoint formula `mid = (start + end) / 2`. If the target value matches the
-* value at index `mid`, the function returns `true`. If the value at `mid` is greater
-* than `x`, the function recursively calls itself with `start` updated to `mid-1`,
-* otherwise it recalls itself with `end` updated to `mid+1`.
-* 
-* In essence:
-* 
-* 	- The function first checks if the target is equal to the middle element of the
-* search interval. If so - true is returned.
-* 	- Otherwise it divides the interval into two parts and repeats the same check on
-* one of them.
-* 	- This process continues until either x is found or the interval is reduced to a
-* single element.
-* 
-* Therefore: the function returns `true` if `x` exists anywhere within the interval
-* specified by `start` and `end`.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
@@ -77,25 +27,6 @@ const search = (arr, x, start, end) => {
 }
 
 
-/**
-* @description This is an AWS Lambda function that handles various routes for FIDO2
-* authentication.
-* 
-* @param { object } event - The `event` input parameter is an object that contains
-* information about the current HTTP request or API call. It provides context and
-* metadata about the event that triggered the function call.
-* 
-* @returns { object } The output of this function is a JSON object with the following
-* properties:
-* 
-* 	- `statusCode`: an integer value indicating the HTTP status code to be returned
-* (200 if successful or one of 40x/50x if there is an error)
-* 	- `body`: a string containing the body of the HTTP response
-* 	- `headers`: an object containing custom HTTP headers.
-* 
-* The function returns this output based on the incoming request event and the claim
-* values obtained from the authorization token.
-*/
 const handler = async(event) => {
     try {
         const { sub, email, phone_number: phoneNumber, name, "cognito:username": cognitoUsername, } = event.requestContext.authorizer.jwt.claims;
