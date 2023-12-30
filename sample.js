@@ -1,3 +1,15 @@
+/**
+* @description This function fetches data from a Reddit API based on the specified
+* `sub` parameter (defaults to "programming") and logs the response or error to the
+* console.
+* 
+* @param { string } sub - The `sub` input parameter specifies the subreddit to fetch
+* data from.
+* 
+* @returns { Promise } The output of this function is a Promise that resolves to the
+* JSON data from the Reddit API for the specified subreddit. If there is an error
+* accessing the API.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
