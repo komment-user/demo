@@ -1,15 +1,3 @@
-/**
-* @description This function fetches the content of a Reddit thread with the specified
-* subreddit ( defaults to "programming") using Axios and logs any errors to the console.
-* 
-* @param { string } sub - The `sub` input parameter is a string that specifies the
-* subreddit to fetch data from. It is used as part of the URL to determine which
-* subreddit's posts should be retrieved.
-* 
-* @returns { object } The output of the function fetch('programming') is a Promise
-* that resolves to an object containing the data from the Reddit API for the subreddit
-* 'programming'.
-*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
