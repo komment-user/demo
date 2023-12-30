@@ -1,3 +1,16 @@
+/**
+* @description This function fetches the content of a Reddit thread with the specified
+* subreddit (determined by the `sub` parameter), using Axios to make an HTTP GET
+* request to the appropriate URL. It then logs the response and returns it to the caller.
+* 
+* @param { string } sub - The `sub` input parameter is a default value for the
+* `axios.get()` URL path. It is used as a placeholder for the actual subreddit name
+* (e.g. "programming") that will be appended to the base URL ("https://www.reddit.com/r/").
+* 
+* @returns { Promise } This function fetches data from a Reddit API using Axios. It
+* returns the response from the API call as a promise. If the API call is successful
+* (i.e., no error), it logs the response to the console and returns the response object.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
