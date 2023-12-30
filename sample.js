@@ -1,4 +1,14 @@
 
+/**
+* @description This function fetches data from a Reddit API using the `axios` library.
+* 
+* @param { string } sub - The `sub` input parameter is a default value for the URL
+* query parameter "sub" which is used to filter the content on the Reddit API.
+* 
+* @returns { object } The output of the `fetch` function is a Promise that resolves
+* to an object containing the data from the Reddit API for the specified `sub`
+* parameter. If there is an error fetching the data.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
