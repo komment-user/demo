@@ -1,3 +1,4 @@
+
 /**
 * @description This function fetches data from a Reddit API using the `axios` library.
 * 
