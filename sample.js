@@ -1,13 +1,4 @@
-/**
-* @description This function fetches the top posts from a Reddit subreddit specified
-* by `sub` parameter using Axios HTTP library.
-* 
-* @param { string } sub - The `sub` input parameter specifies the subreddit to fetch
-* posts from.
-* 
-* @returns { object } The output returned by this function is a Promise that resolves
-* to the contents of the specified Reddit subreddit as a JSON object.
-*/
+
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
