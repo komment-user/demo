@@ -1,4 +1,3 @@
-
 /**
 * @description This function fetches the top posts from a Reddit subreddit specified
 * by `sub` parameter using Axios HTTP library.
