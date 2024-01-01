@@ -23,32 +23,6 @@ function fetch(sub = 'programming') {
 }
 
 
-/**
-* @description This function performs a binary search on an array 'arr' for the value
-* 'x'. It takes four parameters: 'arr', 'x', 'start', and 'end', which represent the
-* array to be searched and the target value to find respectively.
-* 
-* @param { array } arr - The `arr` input parameter is the array to be searched.
-* 
-* @param { string } x - The `x` input parameter represents the value that we are
-* searching for within the array.
-* 
-* @param { number } start - The `start` input parameter specifies the beginning index
-* of the subarray being searched for the specified `x` value.
-* 
-* @param { number } end - The `end` input parameter determines the end point of the
-* range for the searching. It represents the index beyond which the search should
-* not proceed.
-* 
-* @returns { boolean } The function takes an array `arr`, a target value `x`, and
-* three indices `start`, `end`, and `mid` as inputs. It uses binary search to find
-* the first occurrence of `x` within the range `start` to `end`.
-* 
-* The output returned by this function is `true` if `x` is found within the range
-* `start` to `end`, and `false` otherwise. In other words., if the target value `x`
-* exists anywhere within the given array range `arr[start] .. arr[end)`, the function
-* returns `true`.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
