@@ -1,4 +1,3 @@
-
 /**
 * @description This function fetches data from a Reddit API endpoint using Axios and
 * logs the response to the console.
