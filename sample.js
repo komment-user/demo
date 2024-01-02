@@ -1,4 +1,4 @@
-// @komment write all
+// @komment ignore all
 
 /**
 * @description This function fetches data from a Reddit API endpoint using Axios and
