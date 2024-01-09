@@ -1,4 +1,3 @@
-
 /**
 * @description This function fetches data from a Reddit API using the `axios` library.
 * It retrieves the data for a specific subreddit based on the `sub` parameter and
