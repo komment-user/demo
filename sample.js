@@ -14,41 +14,6 @@ function fetch(sub = 'programming') {
 }
 
 
-/**
-* @description This function implements a recursive algorithm to find an element 'x'
-* within a sorted array 'arr'. It works by finding the middle index of the array
-* 'mid', and then checking if 'x' is equal to 'arr[mid]'.
-* 
-* @param { array } arr - The `arr` input parameter is the array to be searched.
-* 
-* @param { any } x - The `x` input parameter is the element to be searched within
-* the array.
-* 
-* @param { number } start - The `start` input parameter determines the beginning of
-* the subarray to be searched.
-* 
-* @param { number } end - The `end` input parameter specifies the endpoint of the
-* range to search within the array. It determines the index beyond which the function
-* should not continue searching for the element.
-* 
-* @returns { boolean } This function is a binary search algorithm that takes an array
-* and three parameters: x (the value to search for), start (the beginning index of
-* the range to search), and end (the ending index of the range to search).
-* 
-* The function works by first checking if the start and end indices are out of order
-* (i.e., if end is less than start). If so (i.e., if end < start), it immediately
-* returns false.
-* 
-* Next (if start > end does not hold true), the function calculates the midpoint of
-* the range by rounding down to the nearest integer withMath.floor() and then checks
-* if the value at that index matches the search value x. If they do match (i.e.,
-* arr[mid]===x), the function returns true immediately.
-* 
-* If they don't match (i.e., arr[mid] > x), the function recursively calls itself
-* with the same arguments except with start and end reversed (start becomes mid-1
-* and end becomes mid+1). This effectively divides the search space into two smaller
-* subspaces around the midpoint.
-*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
