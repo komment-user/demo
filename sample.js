@@ -1,4 +1,17 @@
 
+/**
+* @description This function fetches the top posts from a Reddit forum based on the
+* specified subreddit (defaulting to "programming" if none is provided).
+* 
+* @param {  } sub - The `sub` input parameter is a string that specifies the subreddit
+* for which to fetch content.
+* 
+* @returns { object } The function fetch() uses Axios to make a GET request to the
+* Reddit API for a specific subreddit (e.g., programming). If the request is successful
+* (i.e., there is no error), the function returns the entire JSON response from the
+* API. However if there is an error (e.g., the API is down or the URL is incorrect),
+* the function logs the error to the console and returns null.
+*/
 function fetch(sub = 'programming') {
     const axios = require('axios')
 
@@ -14,6 +27,31 @@ function fetch(sub = 'programming') {
 }
 
 
+/**
+* @description This function performs a linear search of an array for a specific
+* value. It takes four arguments: the array to search (`arr`), the value to find
+* (`x`), and two pointers `start` and `end` that indicate the range of the array to
+* be searched.
+* 
+* @param { array } arr - The `arr` input parameter is the array that needs to be
+* searched for the specified `x`.
+* 
+* @param { any } x - The `x` input parameter is the element to be searched for within
+* the array `arr`.
+* 
+* @param { number } start - The `start` input parameter represents the leftmost index
+* of the subarray being searched.
+* 
+* @param { number } end - The `end` input parameter specifies the endpoint of the
+* range to be searched for the specified value. It determines the last index that
+* will be checked for the existence of the value.
+* 
+* @returns { boolean } The output returned by this function is `true` or `false`,
+* depending on whether the value `x` is found within the range specified by `start`
+* and `end`. If the value `x` exists within that range (either directly or by virtue
+* of being at an index midway between `start` and `end`), then `true` is returned.
+* Otherwise `false` is returned.
+*/
 const search = (arr, x, start, end) => {
   if (start > end) return false;
   let mid = Math.floor((start + end)/2);
